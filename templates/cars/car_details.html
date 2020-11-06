@@ -1,0 +1,23 @@
+{% extends 'bases.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ car.title }} Details
+{% endblock title %}
+
+{% block content %}
+    <ul>
+        <li>{{ car.title }}</li>
+        <li>{{ car.model }}</li>
+        <li>{{ car.odometer }}</li>
+        <li>
+            <img src="{{ car.image.url }}" alt="">
+        </li>
+    </ul>
+
+{% endblock content %}
+
+
+
+
