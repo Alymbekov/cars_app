@@ -61,7 +61,7 @@ class Car(models.Model):
     )
     objects = CarsManager()
     image = models.ImageField(
-        upload_to=upload_image_path, null=True, blank=True
+        upload_to=upload_image_path
     )
     new = models.BooleanField(default=False, blank=True)
 

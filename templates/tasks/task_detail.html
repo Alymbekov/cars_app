@@ -1,0 +1,26 @@
+{% extends 'bases.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ task.title }} Details
+{% endblock title %}
+
+{% block content %}
+    <ul>
+        <li>{{ task.title }}</li>
+        <li>{{ task.description }}</li>
+        <a href="{% url 'tasks:task_edit' pk=task.pk %}">
+            <button type="button" class="btn btn-primary">Update</button>
+
+        </a>
+         <a href="{% url 'tasks:task_delete' pk=task.pk %}">
+        <button type="button" class="btn btn-danger">Delete</button>
+        </a>
+    </ul>
+
+{% endblock content %}
+
+
+
+

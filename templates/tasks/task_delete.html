@@ -3,7 +3,7 @@
 
 
 
-<form action="{%  url 'cars_app:car_delete' pk=car.pk%}" method="POST">
+<form action="{%  url 'tasks:task_delete' pk=task.pk%}" method="POST">
     {% csrf_token %}
     Are you sure want to delete it?
     <input type="submit" value="Delete">

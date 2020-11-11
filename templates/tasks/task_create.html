@@ -1,0 +1,13 @@
+{% load static %}
+
+
+<div class="container">
+<form action="{% url 'tasks:task_create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"> Create Task </button>
+</form>
+</div>
+
+
+

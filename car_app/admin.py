@@ -8,7 +8,7 @@ from .models import Car
 class CarAdmin(admin.ModelAdmin):
     list_display = (
          'title',
-        'odometer', 'year', 'model'
+         'odometer', 'year', 'model'
     )
     list_display_links = ('title', 'model')
     list_filter = ('year', 'model')

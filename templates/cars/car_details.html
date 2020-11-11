@@ -12,8 +12,17 @@
         <li>{{ car.model }}</li>
         <li>{{ car.odometer }}</li>
         <li>
-            <img src="{{ car.image.url }}" alt="">
+            {% if car.image %}
+            <img width="500" src="{{ car.image.url }}" alt="">
+            {% endif %}
         </li>
+        <a href="{% url 'cars_app:car_edit' pk=car.pk %}">
+            <button type="button" class="btn btn-primary">Update</button>
+
+        </a>
+         <a href="{% url 'cars_app:car_delete' pk=car.pk %}">
+        <button type="button" class="btn btn-danger">Delete</button>
+        </a>
     </ul>
 
 {% endblock content %}
