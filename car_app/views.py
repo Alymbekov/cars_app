@@ -61,3 +61,8 @@ def elements(request):
 def generic(request):
     return render(request, 'generic.html', locals())
 
+
+
+
+def hellow(request):
+    return render(request, 'cars/hellow.html', locals())
